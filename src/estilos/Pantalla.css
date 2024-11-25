@@ -1,0 +1,12 @@
+.pantalla{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 3px;
+    height: 100px;
+    font-size: 30px;
+    padding: 5px;
+}
+

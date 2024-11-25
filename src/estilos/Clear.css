@@ -1,0 +1,16 @@
+.clear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 20px;
+    height: 100px;
+    margin: 3px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.clear:hover{
+    background-color: rgb(219, 99, 99);
+}

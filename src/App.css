@@ -1,0 +1,18 @@
+.App{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.contenedor{
+    border: 4px black solid;
+    border-radius: 20px;
+    height: 670px;
+    width: 500px;
+    padding: 3px;
+}
+
+.fila{
+    display: flex;
+}

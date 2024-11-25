@@ -1,0 +1,17 @@
+.boton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    flex: 1;
+    margin: 3px;
+    border-radius: 20px;
+    height: 100px;
+    font-size: 30px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background-color: aqua;
+}
