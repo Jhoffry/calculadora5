@@ -1,10 +1,10 @@
 import React from "react";
 import '../estilos/Clear.css';
 
-function Clear(props){
+function Clear({children, limpiar, valor}){
     return(
-      <div className="clear" onClick={props.manejarClic}>
-        {props.children}
+      <div className="clear" onClick={() => limpiar(valor = '')}>
+        {children}
       </div>
     );
 }

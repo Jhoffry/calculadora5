@@ -9,10 +9,6 @@ function App() {
 
   const[input, setInput] = useState('');
 
-  function agregarInput(valor){
-    setInput(input + valor);
-  }
-
   function calcular(){
     const regex = /^[+|-]?[0-9]+([.][0-9]+)?[+|-|*|/][0-9]+([.][0-9]+)?$/
     const regex2 = /^[0][+|-]?[0-9]+([.][0-9]+)?[+|-|*|/][0-9]+([.][0-9]+)?$/
@@ -33,30 +29,42 @@ function App() {
       <div className='contenedor'>
         <Pantalla>{input}</Pantalla>
         <div className='fila'>
-          <Boton manejarClic={agregarInput}>1</Boton>
-          <Boton manejarClic={agregarInput}>2</Boton>
-          <Boton manejarClic={agregarInput}>3</Boton>
-          <Boton manejarClic={agregarInput}>+</Boton>
+          <Boton changeNumero={setInput}  numero={1}>1</Boton>
+          <Boton changeNumero={setInput}  numero={2}>2</Boton>
+          <Boton changeNumero={setInput}  numero={3}>3</Boton>
+          <Boton changeNumero={setInput}  numero={'+'} >+</Boton>
         </div>
         <div className='fila'>
-          <Boton manejarClic={agregarInput}>4</Boton>
-          <Boton manejarClic={agregarInput}>5</Boton>
-          <Boton manejarClic={agregarInput}>6</Boton>
-          <Boton manejarClic={agregarInput}>-</Boton>
+          <Boton changeNumero={setInput}  numero={4}>4</Boton>
+          <Boton changeNumero={setInput}  numero={5}>5</Boton>
+          <Boton changeNumero={setInput}  numero={6}>6</Boton>
+          <Boton changeNumero={setInput}  numero={"-"}>-</Boton>
         </div>
         <div className='fila'>
-          <Boton manejarClic={agregarInput}>7</Boton>
-          <Boton manejarClic={agregarInput}>8</Boton>
-          <Boton manejarClic={agregarInput}>9</Boton>
-          <Boton manejarClic={agregarInput}>*</Boton>
+          <Boton changeNumero={setInput}  numero={7}>7</Boton>
+          <Boton changeNumero={setInput}  numero={8}>8</Boton>
+          <Boton changeNumero={setInput}  numero={9}>9</Boton>
+          <Boton changeNumero={setInput}  numero={'*'}>*</Boton>
         </div>
         <div className='fila'>
-          <Boton manejarClic={calcular}>=</Boton>
-          <Boton manejarClic={agregarInput}>0</Boton>
-          <Boton manejarClic={agregarInput}>.</Boton>
-          <Boton manejarClic={agregarInput}>/</Boton>
+          <div onClick={calcular} style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            border: '2px solid black',
+            flex: 1,
+            margin: '3px',
+            borderRadius: '20px',
+            height: '100px',
+            fontSize: '30px',
+            userSelect: 'none',
+            cursor: 'pointer'
+          }}>=</div>
+          <Boton changeNumero={setInput}  numero={0}>0</Boton>
+          <Boton changeNumero={setInput}  numero={'.'}>.</Boton>
+          <Boton changeNumero={setInput}  numero={'/'}>/</Boton>
         </div>
-        <Clear manejarClic={() => setInput("")}>Clear</Clear>
+        <Clear limpiar={setInput}>Clear</Clear>
       </div>
     </div>
   );
