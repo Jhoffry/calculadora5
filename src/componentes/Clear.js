@@ -1,9 +1,9 @@
 import React from "react";
 import '../estilos/Clear.css';
 
-function Clear({children, limpiar, valor}){
+function Clear({children, limpiar}){
     return(
-      <div className="clear" onClick={() => limpiar(valor = '')}>
+      <div className="clear" onClick={() => limpiar('')}>
         {children}
       </div>
     );
