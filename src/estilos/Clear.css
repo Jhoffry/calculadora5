@@ -12,5 +12,6 @@
 }
 
 .clear:hover{
+    color:aqua;
     background-color: rgb(219, 99, 99);
 }
